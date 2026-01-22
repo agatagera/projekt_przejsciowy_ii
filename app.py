@@ -28,15 +28,9 @@ year_range = st.sidebar.slider(
 
 max_price = st.sidebar.slider(
     'Maksymalna cena ($)',
-    0,
+   0,
     int(df['price'].max()),
     60
-)
-
-min_reviews = st.sidebar.selectbox(
-    'Minimalna liczba recenzji',
-    [0, 100, 500, 1000, 5000, 10000],
-    index=2
 )
 
 developer_filter = st.sidebar.multiselect(
@@ -49,11 +43,10 @@ publisher_filter = st.sidebar.multiselect(
     options=sorted(df['publisher'].unique())
 )
 
-#filtrowanie
+#filtrowane df
 filtered_df = df[
     (df['release_year'].between(year_range[0], year_range[1])) &
-    (df['price'] <= max_price) &
-    (df['total_reviews'] >= min_reviews)
+    (df['price'] <= max_price) 
 ]
 
 if developer_filter:
