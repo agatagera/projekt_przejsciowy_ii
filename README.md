@@ -36,5 +36,20 @@ Na potrzeby projektu wykonano proces **oczyszczania danych**, który obejmował:
 - **kagglehub** – pobieranie zbioru danych bezpośrednio z platformy Kaggle  
 - **os** – operacje na plikach i katalogach (tworzenie folderów, ścieżki)  
 - **matplotlib** – tworzenie wykresów i wizualizacji danych  
-- **streamlit** – budowa interaktywnego dashboardu analitycznego  
+- **streamlit** – budowa interaktywnego dashboardu analitycznego
+
+##Uruchomienie projektu
+
+1. Zainstaluj wymagane biblioteki:
+```bash
+pip install -r requirements.txt
+```
+2. Uruchom aplikację Streamlit:
+```
+python -m streamlit run "https://github.com/agatagera/projekt_przejsciowy_ii/blob/main/app.py"
+```
+3.Dashboard będzie dostępny w przeglądarce pod adresem:
+```
+http://localhost:8501
+```
 
