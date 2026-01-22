@@ -39,16 +39,22 @@ Na potrzeby projektu wykonano proces **oczyszczania danych**, który obejmował:
 - **streamlit** – budowa interaktywnego dashboardu analitycznego
 
 ##Uruchomienie projektu
+1. Projekt wymaga użycia wirtualnego środowiska, aby zapewnić poprawne wersje zależności i uniknąć konfliktów z innymi projektami
+```
+python -m venv venv
+source venv/bin/activate  # Linux / macOS
+venv\Scripts\activate     # Windows
 
-1. Zainstaluj wymagane biblioteki:
-```bash
+```
+3. Zainstaluj wymagane biblioteki:
+```
 pip install -r requirements.txt
 ```
-2. Uruchom aplikację Streamlit:
+3. Uruchom aplikację Streamlit:
 ```
 python -m streamlit run "https://github.com/agatagera/projekt_przejsciowy_ii/blob/main/app.py"
 ```
-3. Dashboard będzie dostępny w przeglądarce pod adresem:
+4. Dashboard będzie dostępny w przeglądarce pod adresem:
 ```
 http://localhost:8501
 ```
