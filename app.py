@@ -14,7 +14,7 @@ st.title('Steam Games - analiza danych ')
 df = pd.read_csv('dataset/steam_clean.csv')
 
 
-st.sidebar.header('🔍 Filtry')
+st.sidebar.header('Filtry')
 
 min_year = int(df['release_year'].min())
 max_year = int(df['release_year'].max())
@@ -55,7 +55,7 @@ if developer_filter:
 if publisher_filter:
     filtered_df = filtered_df[filtered_df['publisher'].isin(publisher_filter)]
 
-st.write(f'📊 Liczba gier po filtrach: **{len(filtered_df)}**')
+st.write(f'Liczba gier: **{len(filtered_df)}**')
 
 #metryki
 col1, col2, col3, col4 = st.columns(4)
@@ -132,7 +132,7 @@ top_games['average_playtime'] = (top_games['average_playtime'] / 60).round(2)
 st.dataframe(
     top_games.rename(columns={
         'name': 'Gra',
-        'developer': 'DeWeloper',
+        'developer': 'Deweloper',
         'publisher': 'Wydawca',
         'price': 'Cena ($)',
         'total_reviews': 'Liczba recenzji',
@@ -142,11 +142,10 @@ st.dataframe(
     width='stretch'
 )
 
-st.subheader('Wioski')
+st.subheader('Wnioski')
 
 st.markdown('''
 - Najwięksi **wydawcy** generują największą liczbę recenzji  
-- **Developerzy indie** często osiągają bardzo wysokie oceny użytkowników  
-- Duża liczba gier ≠ wysoki procent pozytywnych ocen 
+- Duża liczba recenzji ≠ wysoki procent pozytywnych ocen 
 - Popularność nie zawsze idzie w parze z ceną
 ''')
