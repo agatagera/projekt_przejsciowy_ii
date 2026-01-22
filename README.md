@@ -48,7 +48,7 @@ pip install -r requirements.txt
 ```
 python -m streamlit run "https://github.com/agatagera/projekt_przejsciowy_ii/blob/main/app.py"
 ```
-3.Dashboard będzie dostępny w przeglądarce pod adresem:
+3. Dashboard będzie dostępny w przeglądarce pod adresem:
 ```
 http://localhost:8501
 ```
