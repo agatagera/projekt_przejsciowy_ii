@@ -40,12 +40,12 @@ min_reviews = st.sidebar.selectbox(
 )
 
 developer_filter = st.sidebar.multiselect(
-    'Developer',
+    'Deweloper',
     options=sorted(df['developer'].unique())
 )
 
 publisher_filter = st.sidebar.multiselect(
-    'Publisher',
+    'Wydawca',
     options=sorted(df['publisher'].unique())
 )
 
@@ -72,9 +72,9 @@ col2.metric('Procent pozytywnych ocen (%)', round(filtered_df['user_score'].mean
 col3.metric('Średnia liczba recenzji', int(filtered_df['total_reviews'].mean()))
 col4.metric('Średni czas gry (h)', round(filtered_df['average_playtime'].mean() / 60, 2))
 
-#top developery
+#top dewelopery
 
-st.subheader('Top developerzy (wg liczby recenzji)')
+st.subheader('Top deweloperzy (wg liczby recenzji)')
 
 top_devs = (
     filtered_df
@@ -139,17 +139,17 @@ top_games['average_playtime'] = (top_games['average_playtime'] / 60).round(2)
 st.dataframe(
     top_games.rename(columns={
         'name': 'Gra',
-        'developer': 'Developer',
-        'publisher': 'Publisher',
+        'developer': 'DeWeloper',
+        'publisher': 'Wydawca',
         'price': 'Cena ($)',
         'total_reviews': 'Liczba recenzji',
-        'user_score': 'User score (%)',
-        'average_playtime': 'Śr. czas gry (h)'
+        'user_score': 'Procent pozytywnych recenzji (%)',
+        'average_playtime': 'Średni czas gry (h)'
     }),
     width='stretch'
 )
 
-st.subheader('📌 Wnioski')
+st.subheader('Wioski')
 
 st.markdown('''
 - Najwięksi **wydawcy** generują największą liczbę recenzji  
